@@ -1,24 +1,30 @@
 'use strict';
 
 (function($){
-	$.fn.letsSlide = function(options, direction, offSet, correction, posNeg)
+	$.fn.letsSlide = function(options, direction, offSet, correction)
 	{
 		var settings = $.extend({
 			position : 'relative',
-			left : '1000px'
 		}, options);
 		
 		//var wacht = setTimeout(function(){
 			if(document.documentElement.clientWidth > 1000)
 			{
-					this.css(direction, '-' + offSet + 'px');
+					this.css(direction, '-1000px');
 
-					var animateObject;
-					animateObject = '+=' + (posNeg + (offSet + correction)) + 'px';
-					this.animate(animateObject, 400);
+					if(!isNaN(correction) || !isNaN(offSet))
+					{
+						var animateObject = {};
 
-					animateObject = '-=' + (posNeg + correction) + 'px';
-					this.animate(animateObject, 200);
+						var total = correction + offSet;
+						toString(total);
+
+						animateObject[direction] = '+=' + total + 'px';
+						this.animate(animateObject, 400);
+
+						animateObject[direction] = '-=' + correction + 'px';
+						this.animate(animateObject, 200);
+					}					
 			}
 		//}, 500);
 		return this.css({
