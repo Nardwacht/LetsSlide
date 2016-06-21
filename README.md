@@ -1,8 +1,7 @@
 #Let's Slide!
 
--------------
 A small and simple framework to make your DOM elements animate into your web page!
-
+----------------------------------------------------------------------------------
 Installation
 ------------
 
