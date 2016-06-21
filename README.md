@@ -1,5 +1,4 @@
-# LetsSlide
-Let's Slide!
+#Let's Slide!
 
 ============
 
