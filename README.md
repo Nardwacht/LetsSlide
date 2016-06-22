@@ -12,6 +12,8 @@ In your $(document).ready function, add a jQuery Selector with the letsSlide() f
 
 The available options are direction, offSet and correction.
 
+The direction variable can be top, bottom, left and right.
+
 This will look as follows:
 
 $('.right').letsSlide({}, 'right', 1000, 50);
